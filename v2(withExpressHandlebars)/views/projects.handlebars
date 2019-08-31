@@ -1,0 +1,13 @@
+<section id="gigs" class="container">
+    <h1>My Projects</h1>
+
+    {{#each projects}}
+
+	<div class="gig">
+		<a href="/projects/{{this.name}}"><img style="width:100%;" src='/projects/{{this.name}}/image.gif' alt={{this.name}}></a>
+		<h3 style="font-size:24px;">{{this.name}}</h3>
+		<p style="text-align: justify;">{{this.description}}</p>
+	</div>
+	{{/each}}
+
+</section>

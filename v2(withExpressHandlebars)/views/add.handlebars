@@ -1,0 +1,32 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add a new project</h1>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/projects/add" method="POST">
+        <div class="input-group">
+          <label for="title">Project Title</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="eg. Full-stack web developer project..."
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="technologies">Used Technologies</label>
+          <input type="text" name="technologies" id="technologies" class="input-box" placeholder="eg. HTTP, CSS, javascript, Node.JS, React, AngularJS..."
+          maxlength="100" value={{technologies}}>
+        </div>
+        <div class="input-group">
+          <label for="description">Project Description</label>
+          <textarea name="description" id="description" class="input-box" placeholder="Describe the details of the project"
+            rows="10">{{description}}</textarea>
+        </div>
+        <div class="input-group">
+          <label for="budget">Contact Email</label>
+          <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="Enter an email" value={{contact_email}}>
+        </div>
+        <input type="submit" value="Add Project" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>
